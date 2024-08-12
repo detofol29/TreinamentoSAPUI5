@@ -5,8 +5,4 @@
     <Button
         text="Say Hello"
         press=".onShowHello"/>
-
-    <Button
-        text="Imprima o nome do maior time do mundo"
-        press=".onShowTheBest"/>
 </mvc:View>
