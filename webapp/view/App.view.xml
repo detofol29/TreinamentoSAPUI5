@@ -9,17 +9,24 @@
                 <page title="{i18n>homePageTitle}">
                     <content>
                         <panel
-                        headerText="{i18n>helloPanelTitle}">
+                            headerText="{i18n>helloPanelTitle}"
+                            class="sapUiResponsiveMargin"
+                            width="auto">
                             <content>
                                 <Button
-                                text="{i18n>MostrarBomDia}"
-                                press=".onShowHello"/>
+                                    text="{i18n>MostrarBomDia}"
+                                    press=".onShowHello"
+                                    class="sapUiSmallMarginEnd"/>
 
                                 <Input
-                                value="{/recipient/name}"
-                                description="Olá {/recipient/name}"
-                                valueLiveUpdate="true"
-                                width="40%"/>
+                                    value="{/recipient/name}"
+                                    description="Olá {/recipient/name}"
+                                    valueLiveUpdate="true"
+                                    width="40%"/>
+
+                                <text
+                                    text="Boa noite {/recipient/name}"
+                                    class="sapUiSmallMargin"/>
                             </content>
                         </panel>
                     </content>
