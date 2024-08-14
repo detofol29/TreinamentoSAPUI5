@@ -4,7 +4,7 @@
     xmlns:mvc="sap.ui.core.mvc"
     displayBlock="true">
     <Shell>
-        <App>
+        <App class="myAppDemoWT">
             <pages>
                 <page title="{i18n>homePageTitle}">
                     <content>
@@ -16,7 +16,7 @@
                                 <Button
                                     text="{i18n>MostrarBomDia}"
                                     press=".onShowHello"
-                                    class="sapUiSmallMarginEnd"/>
+                                    class="myCustomButton"/>
 
                                 <Input
                                     value="{/recipient/name}"
@@ -24,9 +24,9 @@
                                     valueLiveUpdate="true"
                                     width="40%"/>
 
-                                <text
-                                    text="Boa noite {/recipient/name}"
-                                    class="sapUiSmallMargin"/>
+                                <FormattedText
+                                    htmlText="Boa noite {/recipient/name}"
+                                    class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
                             </content>
                         </panel>
                     </content>
