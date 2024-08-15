@@ -15,6 +15,14 @@ sap.ui.define([
 
             const sMsg = oPacoteInter.getText("BomDiaMsg"," " + [sRecipiente]);
             MessageToast.show(sMsg);
+        },
+
+        async onOpenDialog(){
+            this.oDialog ??= await this.loadFragment({
+                name: "ui5.walkthrough.view.BoaNoite"
+            });
+
+            this.oDialog.open();
         }
     });
 });
