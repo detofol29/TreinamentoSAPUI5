@@ -4,6 +4,12 @@
     <Dialog 
         id="boaNoiteDialog"
         title="Boa noite {/recipient/name}">
+        <content>
+            <core:Icon
+                src="sap-icon://hello-world"
+                size="8rem"
+                class="sapUiMedium Margin"/>
+        </content>
         <beginButton>
             <Button
                 text="{i18n>dialogCloseButtonText}"
