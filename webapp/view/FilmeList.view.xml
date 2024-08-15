@@ -1,0 +1,14 @@
+<mvc:View
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <List
+        headerText="{i18n>filmeListTitle}"
+        class="sapUiResponsiveMargin"
+        width="auto"
+        items="{filme>/Filmes}">
+        <items>
+            <ObjectListItem
+                title="Nome: {filme>Nome} - Genero: {filme>Genero}"/>
+        </items>
+    </List>
+</mvc:View>

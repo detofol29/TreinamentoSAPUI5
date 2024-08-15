@@ -1,0 +1,34 @@
+{
+    "Filmes": [
+        {
+            "Nome": "StarWars",
+            "Duracao": 210,
+            "Nota": 87.2,
+            "Genero": "Ficcao"
+        },
+        {
+            "Nome": "De volta para o Futuro",
+            "Duracao": 210,
+            "Nota": 87.2,
+            "Genero": "Ficcao"
+        },
+        {
+            "Nome": "Titanic",
+            "Duracao": 210,
+            "Nota": 87.2,
+            "Genero": "Romance"
+        },
+        {
+            "Nome": "Black",
+            "Duracao": 210,
+            "Nota": 87.2,
+            "Genero": "Ficcao"
+        },
+        {
+            "Nome": "Vingadores",
+            "Duracao": 210,
+            "Nota": 87.2,
+            "Genero": "Acao"
+        }
+    ]
+}
