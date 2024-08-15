@@ -20,7 +20,8 @@
                         showMeasure: false
                     }
                 }"
-                numberUnit="{view>/currency}"/>
+                numberUnit="{view>/currency}"
+                numberState="{= ${filme>Nota} > 50 ? 'Success' : 'Error' }"/>
         </items>
     </List>
 </mvc:View>
