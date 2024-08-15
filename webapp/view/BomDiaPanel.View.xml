@@ -15,7 +15,7 @@
             <Button
                 text="{i18n>MostrarBomDia}"
                 press=".onShowHello"
-                class="myCustomButton"/>
+                class="myCustomButton sapUiSmallMarginEnd"/>
             <Input
                 value="{/recipient/name}"
                 description="Olá {/recipient/name}"
