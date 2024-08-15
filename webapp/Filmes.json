@@ -4,31 +4,31 @@
             "Nome": "StarWars",
             "Duracao": 210,
             "Nota": 97.2,
-            "Genero": "Ficcao"
+            "Genero": "F"
         },
         {
             "Nome": "De volta para o Futuro",
             "Duracao": 210,
             "Nota": 93.2,
-            "Genero": "Ficcao"
+            "Genero": "F"
         },
         {
             "Nome": "Titanic",
             "Duracao": 210,
             "Nota": 72.2,
-            "Genero": "Romance"
+            "Genero": "R"
         },
         {
             "Nome": "Black",
             "Duracao": 210,
             "Nota": 47.2,
-            "Genero": "Ficcao"
+            "Genero": "F"
         },
         {
             "Nome": "Vingadores",
             "Duracao": 210,
             "Nota": 66.2,
-            "Genero": "Acao"
+            "Genero": "A"
         }
     ]
 }

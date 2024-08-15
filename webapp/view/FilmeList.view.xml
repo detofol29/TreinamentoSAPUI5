@@ -9,7 +9,7 @@
         items="{filme>/Filmes}">
         <items>
             <ObjectListItem
-                title="Nome: {filme>Nome} - Genero: {filme>Genero}"
+                title="Nome: {filme>Nome}"
                 number="{
                     parts: [
                         'filme>Nota',
@@ -21,7 +21,15 @@
                     }
                 }"
                 numberUnit="{view>/currency}"
-                numberState="{= ${filme>Nota} > 50 ? 'Success' : 'Error' }"/>
+                numberState="{= ${filme>Nota} > 50 ? 'Success' : 'Error' }">
+                <firstStatus>
+                    <ObjectStatus
+                        text="{
+                            path: 'filme>Genero',
+                            formatter: '.formatter.statusText'
+                        }"/>
+                </firstStatus>
+            </ObjectListItem>
         </items>
     </List>
 </mvc:View>
