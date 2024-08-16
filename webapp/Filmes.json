@@ -1,21 +1,21 @@
 {
     "Filmes": [
         {
-            "Nome": "StarWars",
+            "Nome": "Deadpool & Wolverine",
             "Duracao": 210,
-            "Nota": 97.2,
-            "Genero": "F"
+            "Nota": 91.2,
+            "Genero": "A"
         },
         {
-            "Nome": "De volta para o Futuro",
+            "Nome": "Meu Malvado Favorito 4",
             "Duracao": 210,
             "Nota": 93.2,
             "Genero": "F"
         },
         {
-            "Nome": "Titanic",
+            "Nome": "É assim que acaba",
             "Duracao": 210,
-            "Nota": 72.2,
+            "Nota": 48.2,
             "Genero": "R"
         },
         {
@@ -25,9 +25,9 @@
             "Genero": "F"
         },
         {
-            "Nome": "Vingadores",
+            "Nome": "Divertidamente",
             "Duracao": 210,
-            "Nota": 66.2,
+            "Nota": 72.2,
             "Genero": "A"
         }
     ]
