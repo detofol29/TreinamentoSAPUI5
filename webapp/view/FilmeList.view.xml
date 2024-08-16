@@ -11,7 +11,7 @@
             path: 'filme>/Filmes',
             sorter : {
                 path: 'Genero',
-                group : true
+                group : false
             }
         }">
         <headerToolbar>
