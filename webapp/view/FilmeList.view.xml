@@ -7,7 +7,13 @@
         headerText="{i18n>filmeListTitle}"
         class="sapUiResponsiveMargin"
         width="auto"
-        items="{filme>/Filmes}">
+        items="{
+            path: 'filme>/Filmes',
+            sorter : {
+                path: 'Genero',
+                group : true
+            }
+        }">
         <headerToolbar>
             <Toolbar>
                 <Title text="{i18n>filmeListTitle}"/>
