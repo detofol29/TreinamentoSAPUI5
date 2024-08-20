@@ -2,7 +2,7 @@
     controllerName="ui5.walkthrough.controller.FilmeList"
     xmlns="sap.m"
     xmlns:mvc="sap.ui.core.mvc">
-    <List
+    <Table
         id="filmeList"
         headerText="{i18n>filmeListTitle}"
         class="sapUiResponsiveMargin"
@@ -24,31 +24,64 @@
                     liveChange=".onFilterFilmes"/>
             </Toolbar>
         </headerToolbar>
-        <items>
-            <ObjectListItem
-                title="Nome: {filme>Nome}"
-                number="{
-                    parts: [
-                        'filme>Nota',
-                        'view>/currency'
-                    ],
-                    type: 'sap.ui.model.type.Currency',
-                    formatOptions: {
-                        showMeasure: false
-                    }
-                }"
-                numberUnit="{view>/currency}"
-                numberState="{= ${filme>Nota} > 50 ? 'Success' : 'Error' }"
-                type="Navigation"
-                press=".onPress">
-                <firstStatus>
-                    <ObjectStatus
-                        text="{
-                            path: 'filme>Genero',
-                            formatter: '.formatter.statusText'
-                        }"/>
-                </firstStatus>
-            </ObjectListItem>
-        </items>
-    </List>
+        <columns>
+			<Column>
+				<Text text="{i18n>columnName}" />
+			</Column>
+			<Column
+				minScreenWidth="Small"
+				demandPopin="true">
+				<Text text="{i18n>columnGenero}" />
+			</Column>
+			<Column hAlign="End">
+				<Text text="{i18n>columnNota}" />
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem
+				type="Navigation"
+				press=".onPress">
+				<cells>
+					<ObjectIdentifier title="{filme>Nome}" />
+					<Text
+						text="{
+								parts: [
+									'filme>Status',
+									'i18n>filmeGeneroA',
+									'i18n>filmeGeneroR',
+									'i18n>filmeGeneroF'
+								],
+								formatter: '.formatter.statusText'
+							}"/>
+					<Text text="{filme>Nome}" />
+
+					<ObjectIdentifier title="{filme>Genero}" />
+					<Text
+						text="{
+								parts: [
+									'filme>Genero',
+									'i18n>filmeGeneroA',
+									'i18n>filmeGeneroF',
+									'i18n>filmeGeneroR'
+								],
+								formatter: '.formatter.statusText'
+							}"/>
+					<Text text="{filme>Genero}" />
+					<ObjectNumber
+						number="{
+								parts: [
+									'filme>Nota',
+									'view>/currency'
+								],
+								type: 'sap.ui.model.type.Currency',
+								formatOptions: {
+									showMeasure: false
+								}
+							}"
+						unit="{view>/currency}"
+						state="{= ${filme>Nota} > 50 ? 'Success' : 'Error' }"/>
+				</cells>
+			</ColumnListItem>
+		</items>
+    </Table>
 </mvc:View>
