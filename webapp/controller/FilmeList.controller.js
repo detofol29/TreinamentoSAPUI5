@@ -28,6 +28,11 @@ sap.ui.define([
             const oList = this.byId("filmeList");
             const oBinding = oList.getBinding("items");
             oBinding.filter(aFilter);
+        },
+
+        onPress() {
+            const oRouter = this.getOwnerComponent().getRouter();
+            oRouter.navTo("detail");
         }
     });
 });

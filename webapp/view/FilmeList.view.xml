@@ -38,7 +38,9 @@
                     }
                 }"
                 numberUnit="{view>/currency}"
-                numberState="{= ${filme>Nota} > 50 ? 'Success' : 'Error' }">
+                numberState="{= ${filme>Nota} > 50 ? 'Success' : 'Error' }"
+                type="Navigation"
+                press=".onPress">
                 <firstStatus>
                     <ObjectStatus
                         text="{

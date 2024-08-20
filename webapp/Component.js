@@ -29,15 +29,19 @@ sap.ui.define([
             //Define o modelo JSON criado como o modelo padrão do componente
             //todas as visualizações e controladores dentro deste componente podem acessar esses dados
             this.setModel(oModel);
+            
+            //cria as views baseado na url
+            this.getRouter().initialize();
 
             //cria um modelo de recursos para a internacionalização
-            const i18nModel = new ResourceModel({
-                bundleName : "ui5.walkthrough.i18n.i18n"
-            });
+            // const i18nModel = new ResourceModel({
+            //     bundleName : "ui5.walkthrough.i18n.i18n"
+            // });
 
             //Define o modelo de internacionalização com o nome "i18n"
             //Esse modelo pode ser acessado nas visualizações e controladores usando esse nome
-            this.setModel(i18nModel, "i18n");
+            //this.setModel(i18nModel, "i18n");
+            
         }
     });
 });
