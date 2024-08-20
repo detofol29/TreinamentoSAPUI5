@@ -1,8 +1,9 @@
 sap.ui.define([
-    "../localService/mockserver"
-], (mockServer) => {
-    "use strict";
+	"../localService/mockserver"
+], (mockserver) => {
+	"use strict";
 
-    mockServer.Init();
-    sap.ui.require(["sap/ui/core/ComponentSupport"]);
+	mockserver.init();
+
+	sap.ui.require(["sap/ui/core/ComponentSupport"]);
 });
