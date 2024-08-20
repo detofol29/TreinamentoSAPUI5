@@ -67,7 +67,7 @@
           "target": "overview"
         },
         {
-          "pattern": "detail",
+          "pattern": "detail/{filmePath}",
           "name": "detail",
           "target": "detail"
         }

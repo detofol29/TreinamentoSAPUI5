@@ -30,9 +30,12 @@ sap.ui.define([
             oBinding.filter(aFilter);
         },
 
-        onPress() {
-            const oRouter = this.getOwnerComponent().getRouter();
-            oRouter.navTo("detail");
-        }
+        onPress(oEvent) {
+			const oItem = oEvent.getSource();
+			const oRouter = this.getOwnerComponent().getRouter();
+			oRouter.navTo("detail", {
+				filmePath: window.encodeURIComponent(oItem.getBindingContext("filme").getPath().substr(1))
+			});
+		}
     });
 });
