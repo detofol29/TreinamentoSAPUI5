@@ -2,79 +2,90 @@
     controllerName="ui5.walkthrough.controller.FilmeList"
     xmlns="sap.m"
     xmlns:mvc="sap.ui.core.mvc">
-    <Table
-        id="filmeList"
-        headerText="{i18n>filmeListTitle}"
-        class="sapUiResponsiveMargin"
-        width="auto"
-        items="{
-            path: 'filme>/Filmes',
-            sorter : {
-                path: 'Genero',
-                group : false
-            }
-        }">
-        <headerToolbar>
-            <Toolbar>
-                <Title text="{i18n>filmeListTitle}"/>
-                <ToolbarSpacer/>
-                <SearchField
-                    width="50%"
-                    search=".onFilterFilmes"
-                    liveChange=".onFilterFilmes"/>
-            </Toolbar>
-        </headerToolbar>
-        <columns>
-			<Column>
-				<Text text="{i18n>columnName}" />
-			</Column>
-			<Column
-				minScreenWidth="Small"
-				demandPopin="true">
-				<Text text="{i18n>columnGenero}" />
-			</Column>
-			<Column hAlign="End">
-				<Text text="{i18n>columnNota}" />
-			</Column>
-		</columns>
-		<items>
-			<ColumnListItem
-				type="Navigation"
-				press=".onPress">
-				<cells>
-					<!-- Nome do filme -->
-					<ObjectIdentifier title="{filme>Nome}"/>
+	<Panel accessibleRole="Region">
+		<headerToolbar>
+			<Toolbar>
+				<Title text ="{i18n>filmeListTitle}"/>
+				<ToolbarSpacer/>
+				<SearchField
+					width="50%"
+					search=".onFilterFilmes"/>
+			</Toolbar>
+		</headerToolbar>			
+		<Table
+			id="filmeList"
+			headerText="{i18n>filmeListTitle}"
+			class="sapUiResponsiveMargin"
+			width="auto"
+			items="{
+				path: 'filme>/Filmes',
+				sorter : {
+					path: 'Genero',
+					group : false
+				}
+			}">
+			<headerToolbar>
+				<Toolbar>
+					<Title text="{i18n>filmeListTitle}"/>
+					<ToolbarSpacer/>
+					<SearchField
+						width="50%"
+						search=".onFilterFilmes"
+						liveChange=".onFilterFilmes"/>
+				</Toolbar>
+			</headerToolbar>
+			<columns>
+				<Column>
+					<Text text="{i18n>columnName}" />
+				</Column>
+				<Column
+					minScreenWidth="Small"
+					demandPopin="true">
+					<Text text="{i18n>columnGenero}" />
+				</Column>
+				<Column hAlign="End">
+					<Text text="{i18n>columnNota}" />
+				</Column>
+			</columns>
+			<items>
+				<ColumnListItem
+					type="Navigation"
+					press=".onPress">
+					<cells>
+						<!-- Nome do filme -->
+						<ObjectIdentifier title="{filme>Nome}"/>
 
-					<!-- Genero filme -->
-					<Text
-						text="{
+						<!-- Genero filme -->
+						<Text
+							text="{
+									parts: [
+										'filme>Genero',
+										'i18n>filmeGeneroA',
+										'i18n>filmeGeneroF',
+										'i18n>filmeGeneroR'
+									],
+									formatter: '.formatter.statusText'
+								}"/>
+
+						<!-- Nota filme -->
+						<ObjectNumber
+							title="Nome: {filme>Nome}"
+							number="{
 								parts: [
-									'filme>Genero',
-									'i18n>filmeGeneroA',
-									'i18n>filmeGeneroF',
-									'i18n>filmeGeneroR'
+									'filme>Nota',
+									'view>/currency'
 								],
-								formatter: '.formatter.statusText'
-							}"/>
-
-					<!-- Nota filme -->
-					<ObjectNumber
-						title="Nome: {filme>Nome}"
-						number="{
-							parts: [
-								'filme>Nota',
-								'view>/currency'
-							],
-							type: 'sap.ui.model.type.Currency',
-							formatOptions: {
-								showMeasure: false
-							}
-						}"
-						unit="{view>/currency}"
-						state="{= ${filme>Nota} > 50 ? 'Success' : 'Error' }">
-            		</ObjectNumber>
-				</cells>
-			</ColumnListItem>
-		</items>
-    </Table>
+								type: 'sap.ui.model.type.Currency',
+								formatOptions: {
+									showMeasure: false
+								}
+							}"
+							unit="{view>/currency}"
+							state="{= ${filme>Nota} > 50 ? 'Success' : 'Error' }">
+						</ObjectNumber>
+					</cells>
+				</ColumnListItem>
+			</items>
+		</Table>
+	</Panel>	
 </mvc:View>
