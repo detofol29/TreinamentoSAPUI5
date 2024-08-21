@@ -8,8 +8,22 @@
         showNavButton="true"
 		navButtonPress=".onNavBack">
 		<ObjectHeader
+			responsive="true"
+            fullScreenOptimized="true"
+            number="{
+                parts: [
+                    'filme>Nota',
+                    'view>/currency'
+                ],
+                type: 'sap.ui.model.type.Currency',
+                formatOptions: {
+                    showMeasure: false
+                }
+            }"
+            numberUnit="{view>/currency}"
             intro="{filme>Nome}" 
             title="{filme>Nota}"/>
+		
         <wt:ProductRating 
 			id="rating" 
 			class="sapUiSmallMarginBeginEnd" 

@@ -1,8 +1,9 @@
 sap.ui.define([
     "sap/ui/core/UIComponent", //fornece a base para a criação de componentes
     "sap/ui/model/json/JSONModel",// tilizada para trabalhar com dados JSON em um modelo
-    "sap/ui/model/resource/ResourceModel" //gerenciar e carregar recursos de internacionalização, como arquivos de propriedades
-], (UIComponent, JSONModel, ResourceModel) => {
+    // "sap/ui/model/resource/ResourceModel" //gerenciar e carregar recursos de internacionalização, como arquivos de propriedades
+    "sap/ui/Device"
+], (UIComponent, JSONModel, Device) => {
     "use strict";
 
     return UIComponent.extend("ui5.walkthrough.Component",{
@@ -29,6 +30,10 @@ sap.ui.define([
             //Define o modelo JSON criado como o modelo padrão do componente
             //todas as visualizações e controladores dentro deste componente podem acessar esses dados
             this.setModel(oModel);
+
+            const oDeviceModel = new JSONModel(Device);
+            oDeviceModel.setDefaultBindingMode("OneWay");
+            this.setModel(oDeviceModel, "device");
             
             //cria as views baseado na url
             this.getRouter().initialize();
