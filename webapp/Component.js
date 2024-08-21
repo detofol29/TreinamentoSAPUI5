@@ -47,6 +47,10 @@ sap.ui.define([
             //Esse modelo pode ser acessado nas visualizações e controladores usando esse nome
             //this.setModel(i18nModel, "i18n");
             
+        },
+
+        getContentDensityClass() {
+            return Device.support.touch ? "sapUiSizeCozy" : "sapUiSizeCompact";
         }
     });
 });

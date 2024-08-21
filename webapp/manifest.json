@@ -83,5 +83,10 @@
         }
       }
     }
+  },
+
+  "contentDensities": {
+      "compact": true,
+      "cozy": true
   }
 }
