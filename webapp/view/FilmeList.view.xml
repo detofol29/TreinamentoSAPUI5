@@ -42,20 +42,10 @@
 				type="Navigation"
 				press=".onPress">
 				<cells>
-					<ObjectIdentifier title="{filme>Nome}" />
-					<Text
-						text="{
-								parts: [
-									'filme>Status',
-									'i18n>filmeGeneroA',
-									'i18n>filmeGeneroR',
-									'i18n>filmeGeneroF'
-								],
-								formatter: '.formatter.statusText'
-							}"/>
-					<Text text="{filme>Nome}" />
+					<!-- Nome do filme -->
+					<ObjectIdentifier title="{filme>Nome}"/>
 
-					<ObjectIdentifier title="{filme>Genero}" />
+					<!-- Genero filme -->
 					<Text
 						text="{
 								parts: [
@@ -66,20 +56,23 @@
 								],
 								formatter: '.formatter.statusText'
 							}"/>
-					<Text text="{filme>Genero}" />
+
+					<!-- Nota filme -->
 					<ObjectNumber
+						title="Nome: {filme>Nome}"
 						number="{
-								parts: [
-									'filme>Nota',
-									'view>/currency'
-								],
-								type: 'sap.ui.model.type.Currency',
-								formatOptions: {
-									showMeasure: false
-								}
-							}"
+							parts: [
+								'filme>Nota',
+								'view>/currency'
+							],
+							type: 'sap.ui.model.type.Currency',
+							formatOptions: {
+								showMeasure: false
+							}
+						}"
 						unit="{view>/currency}"
-						state="{= ${filme>Nota} > 50 ? 'Success' : 'Error' }"/>
+						state="{= ${filme>Nota} > 50 ? 'Success' : 'Error' }">
+            		</ObjectNumber>
 				</cells>
 			</ColumnListItem>
 		</items>
